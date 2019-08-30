@@ -10,7 +10,8 @@
     },
   
   "resource_requests": {
-    "memory": "100M"
+    "memory": "4G",
+    "cpu": 1.0
   },
   "input": {
     "cross": [
