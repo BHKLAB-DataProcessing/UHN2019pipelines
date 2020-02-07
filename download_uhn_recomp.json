@@ -1,0 +1,26 @@
+{
+  "pipeline": {
+    "name": "download_uhn_recomp"
+  },
+  "transform": {
+    "image": "bhklab/pharmacogx:v3",
+    "cmd": [
+      "Rscript", 
+      "/pfs/recomputedUHNBreast2019/download_recomputed.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "100M"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/recomputedUHNBreast2019.git",
+          "name": "",
+          "branch": "master"
+        }
+      }
+    ]
+  }
+}
