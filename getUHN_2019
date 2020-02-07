@@ -1,0 +1,48 @@
+{
+  "pipeline": {
+    "name": "getUHN_2019"
+  },
+  "transform": {
+    "image": "bhklab/pharmacogx:v3",
+    "cmd": [
+      "Rscript", 
+      "/pfs/getUHNBreast_2019/UHNBreast_2019.R", "Kallisto-0.46.1", "Gencode_v33", "asdssha742832sb"]
+    },
+  
+  "resource_requests": {
+    "memory": "4G"
+  },
+  
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/getUHNBreast_2019.git",
+          "name": "",
+          "branch": "master"
+        }
+      },
+      
+      {
+        "pfs": {
+          "repo": "downAnnotations",
+          "glob": "/"
+        }
+      },
+      
+      {
+        "pfs": {
+          "repo": "download_uhn_recomp",
+          "glob": "/"
+        }
+      },
+      
+      {
+        "pfs": {
+          "repo": "download_uhn_rnaseqkallisto",
+          "glob": "/"
+        }
+      } 
+    ]
+  }
+}
