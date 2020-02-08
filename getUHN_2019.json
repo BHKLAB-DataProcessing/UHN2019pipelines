@@ -3,7 +3,7 @@
     "name": "getUHN_2019"
   },
   "transform": {
-    "image": "bhklab/pharmacogx:v3",
+    "image": "bhklab/pharmacogx:v7",
     "cmd": [
       "Rscript", 
       "/pfs/getUHNBreast_2019/UHNBreast_2019.R", "Kallisto-0.46.1", "Gencode_v33", "asdssha742832sb"]
