@@ -1,12 +1,12 @@
 {
   "pipeline": {
-    "name": "uhn2019RawSensitivity"
+    "name": "calculateuhn2019raw"
   },
   "transform": {
     "image": "bhklab/pharmacogx:v10",
     "cmd": [
       "Rscript", 
-      "/pfs/downloadUHN2019SensRaw/downloadSensData.R"]
+      "/pfs/UHN2019RawSensitivity/processData.R"]
     },
   
   "resource_requests": {
@@ -16,7 +16,7 @@
     "cross": [
       {
         "git": {
-          "url": "https://github.com/BHKLAB-Pachyderm/downloadUHN2019SensRaw.git",
+          "url": "https://github.com/BHKLAB-Pachyderm/UHN2019RawSensitivity.git",
           "name": "",
           "branch": "master"
         }
