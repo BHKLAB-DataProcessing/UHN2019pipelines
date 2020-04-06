@@ -32,14 +32,14 @@
       
       {
         "pfs": {
-          "repo": "download_uhn_recomp",
+          "repo": "calculateuhn2019raw",
           "glob": "/"
         }
       },
       
       {
         "pfs": {
-          "repo": "download_uhn_rnaseqkallisto",
+          "repo": "uhn_rnaseq_kallisto_0_46_1",
           "glob": "/"
         }
       } 
